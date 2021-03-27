@@ -1,0 +1,258 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: #fff;
+}
+
+/* ?variables */
+:root {
+	--main-backgroun-color: black;
+	--main-font-family: Arial, Helvetica, sans-serif;
+	--main-font-size: 16px;
+	--main-color: cyan;
+	--secend-color: #fff;
+	--theard-color: gray;
+}
+
+body {
+	background-color: var(--main-backgroun-color);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: var(--font-size);
+	color: var(--secend-color);
+}
+/* ?small screen */
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* ?the nav bar section */
+
+.logo {
+	margin: 20px 20px;
+	font-size: 20px;
+}
+
+.logo h1 span {
+	color: var(--main-color);
+}
+.nav {
+	margin-top: 50px;
+	margin-right: 2.5em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 150px;
+	height: 150px;
+	background: rgba(255, 255, 255, 0.089);
+	border-radius: 100% 0 100% 100%;
+	transition: all 500ms ease-out;
+}
+.nav ul {
+	list-style: none;
+	display: block;
+	padding: 10px;
+}
+.nav ul li {
+	padding: 0.8em;
+}
+.nav ul li a {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1em;
+	padding: 1.5em;
+}
+.nav ul li:first-child a {
+	color: var(--main-color);
+}
+.humburgermenu {
+	position: absolute;
+	right: 20px;
+	top: 40px;
+	width: 25px;
+	height: 25px;
+	display: flex;
+	align-items: center;
+	z-index: 10;
+}
+.bar {
+	position: relative;
+	width: 100%;
+	height: 3px;
+	background: var(--secend-color);
+	display: flex;
+}
+.bar::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	background: var(--secend-color);
+	top: 7px;
+}
+
+.bar::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	background: var(--secend-color);
+	bottom: 7px;
+}
+
+/* ?the content section */
+
+.content {
+	margin-top: 100px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.title {
+	text-align: center;
+	line-height: 50px;
+	width: 100%;
+	font-size: 1.3em;
+}
+.title h3 span {
+	color: var(--main-color);
+}
+.title h3:nth-child(2) {
+	color: var(--secend-color);
+}
+.title h3:last-child {
+	color: var(--theard-color);
+}
+
+/* ?the works section */
+
+/* ?the footer section */
+
+.footer {
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.089);
+	margin-top: 100px;
+}
+.footer h4 {
+	line-height: 1.2em;
+	padding: 1em;
+}
+.footer_logo {
+	font-size: 20px;
+	width: 100%;
+	padding: 0.7em;
+}
+.footer_logo h1 span {
+	color: var(--main-color);
+}
+.footer_btns {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 1em;
+}
+.email_btn {
+	background-color: var(--main-color);
+	font-size: 1em;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	padding: 0.3em;
+	text-shadow: 0 0 5px black;
+}
+.social img {
+	height: 1.7em;
+}
+/* !js animation section classes */
+
+.shownav {
+	transform: scale(0, 0);
+	transform-origin: top right;
+}
+
+/* ?big screen */
+@media (min-width: 800px) {
+	/* ?nav bar section */
+
+	.nav {
+		all: unset;
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+	.logo:hover {
+		text-shadow: 0 0 10px var(--main-color),
+			0 0 20px var(--main-color),
+			0 0 30px var(--main-color),
+			0 0 40px var(--main-color);
+	}
+	.nav ul {
+		display: flex;
+	}
+	.nav ul li:first-child a {
+		color: var(--main-color);
+	}
+
+	.nav ul li:hover {
+		border: solid 1px var(--main-color);
+		border-radius: 100%;
+		box-shadow: 0 0 10px var(--main-color),
+			0 0 20px var(--main-color),
+			0 0 30px var(--main-color),
+			0 0 40px var(--main-color);
+	}
+	.humburgermenu {
+		display: none;
+	}
+	/* ?content section */
+
+	.title {
+		margin-top: 100px;
+		font-size: 2em;
+		line-height: 2em;
+	}
+	.title h3 span:hover {
+		text-shadow: 0 0 10px var(--main-color),
+			0 0 20px var(--main-color),
+			0 0 30px var(--main-color),
+			0 0 40px var(--main-color);
+	}
+
+	/* ?footer section */
+	.footer {
+		position: relative;
+		bottom: 0;
+	}
+
+	.footer h4 {
+		line-height: 1.5em;
+		padding: 1em;
+		font-size: 20px;
+	}
+	.footer_logo:hover {
+		text-shadow: 0 0 10px var(--main-color),
+			0 0 20px var(--main-color),
+			0 0 30px var(--main-color),
+			0 0 40px var(--main-color);
+	}
+	.footer_logo {
+		font-size: 20px;
+		width: 100%;
+		padding: 0.7em;
+	}
+	.email_btn {
+		font-size: 1.5em;
+	}
+	.email_btn:hover {
+		box-shadow: 0 0 10px var(--main-color),
+			0 0 20px var(--main-color),
+			0 0 30px var(--main-color),
+			0 0 40px var(--main-color);
+	}
+}
